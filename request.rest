@@ -1,0 +1,11 @@
+### Get all contacts
+GET http://localhost:8080/contacts
+
+### Get contact by ID
+GET http://localhost:8080/contacts/6a03da4eb44b4311bb800b8b
+
+### Get all contacts on Render
+GET https://cse341-node-ndr2.onrender.com/contacts
+
+### Get contact by ID on Render
+GET https://cse341-node-ndr2.onrender.com/contacts/6a03da4eb44b4311bb800b8b

@@ -27,7 +27,21 @@ router.post('/', (req, res) => {
     createContact(req, res)
 });
 
-router.put('/:id', updateContact);
+router.put('/:id', (req, res) => {
+    /* #swagger.parameters['body'] = {
+      in: 'body',
+      required: true,
+      schema: {
+        firstName: 'Jesus',
+        lastName: 'Figueroa',
+        email: 'jesus@email.com',
+        favoriteColor: 'blue',
+        birthday: '01/01/2000'
+      }
+    } */
+    updateContact(req, res);
+  });
+  
 
 router.delete('/:id', deleteContact);
 

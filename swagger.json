@@ -99,6 +99,36 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string",
+                  "example": "Jesus"
+                },
+                "lastName": {
+                  "type": "string",
+                  "example": "Figueroa"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "jesus@email.com"
+                },
+                "favoriteColor": {
+                  "type": "string",
+                  "example": "blue"
+                },
+                "birthday": {
+                  "type": "string",
+                  "example": "01/01/2000"
+                }
+              }
+            }
           }
         ],
         "responses": {

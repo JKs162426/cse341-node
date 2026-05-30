@@ -1,0 +1,11 @@
+### Get all players
+GET http://localhost:8080/players
+
+### Get player by ID
+GET http://localhost:8080/players/REEMPLAZA_CON_ID
+
+### Get all teams
+GET http://localhost:8080/teams
+
+### Get team by ID
+GET http://localhost:8080/teams/REEMPLAZA_CON_ID

@@ -6,7 +6,7 @@ const doc = {
     description: 'API for managing baseball players and teams'
   },
   host: 'localhost:8080',
-  schemes: ['http']
+  schemes: ['http', 'https']
 };
 
 const outputFile = './swagger.json';

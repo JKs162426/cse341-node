@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const { getAllPlayers, getPlayerById, createPlayer, updatePlayer, deletePlayer } = require('../controllers/players');
+const isAuthenticated = require('../auth/isAuthenticated');
 
 router.get('/', getAllPlayers);
 router.get('/:id', getPlayerById);
-router.post('/', (req, res) => {
+router.post('/', isAuthenticated, (req, res) => {
   /* #swagger.parameters['body'] = {
     in: 'body',
     required: true,
@@ -22,7 +23,7 @@ router.post('/', (req, res) => {
   } */
   createPlayer(req, res);
 });
-router.put('/:id', (req, res) => {
+router.put('/:id', isAuthenticated, (req, res) => {
   /* #swagger.parameters['body'] = {
     in: 'body',
     required: true,
@@ -40,6 +41,6 @@ router.put('/:id', (req, res) => {
   } */
   updatePlayer(req, res);
 });
-router.delete('/:id', deletePlayer);
+router.delete('/:id', isAuthenticated, deletePlayer);
 
 module.exports = router;
